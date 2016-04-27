@@ -16,7 +16,7 @@ var client = new Twitter({
   access_token_secret: process.env.twitter_ats,
 });
 
-client.stream('statuses/filter', {track: 'nodejs'},  function(stream){
+client.stream('statuses/filter', {track: 'jaxarcsig'},  function(stream){
   stream.on('data', function(tweet) {
     console.log(tweet.text); // tweet.text
     const commandArray = tweet.text.split(' ');
@@ -47,7 +47,7 @@ const myInterval = setInterval(() => {
     var publishEventPr = particle.publishEvent({ 
       name: 'twitterEvent', 
       data: nextCommand, 
-      auth: process.env.particle_auth_token });
+      auth: process.env.SPARKACCESSTOKEN });
 
     publishEventPr.then(
       function(data) {
