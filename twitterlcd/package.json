@@ -21,5 +21,9 @@
   "bugs": {
     "url": "https://github.com/davidfekke/particleiot/issues"
   },
-  "homepage": "https://github.com/davidfekke/particleiot#readme"
+  "homepage": "https://github.com/davidfekke/particleiot#readme",
+  "dependencies": {
+    "particle-api-js": "^5.2.6",
+    "twitter": "^1.2.5"
+  }
 }
